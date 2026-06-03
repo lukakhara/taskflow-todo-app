@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "JosefinSans";
+  src: url("/src/assets/fonts/static/JosefinSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JosefinSansBold";
+  src: url("/src/assets/fonts/static/JosefinSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  [data-theme="false"] {
+    --container-bg: hsl(0, 0%, 100%);
+    --main-bg: hsl(0, 0%, 98%);
+    --primary-text: hsl(235, 19%, 35%);
+    --second-text: hsl(237, 14%, 26%);
+    --border-color: hsl(236, 33%, 92%);
+    --mobile-bg: url("src/images/bg-mobile-light.jpg");
+    --desktop-bg: url("src/images/bg-desktop-light.jpg");
+    --shadow: hsl(236, 33%, 92%);
+    --placeholder: hsl(237, 14%, 26%);
+  }
+  /* Dark Theme */
+  [data-theme="true"] {
+    --container-bg: hsl(235, 24%, 19%);
+    --main-bg: hsl(235, 21%, 11%);
+    --primary-text: hsl(234, 39%, 85%);
+    --second-text: hsl(233, 11%, 84%);
+    --border-color: hsl(233, 14%, 35%);
+    --mobile-bg: url("src/images/bg-mobile-dark.jpg");
+    --desktop-bg: url("src/images/bg-desktop-dark.jpg");
+    --shadow: hsl(235, 21%, 11%);
+    --placeholder: hsl(233, 11%, 84%);
+  }
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  /* --font-josefinSans: "JosefinSans", sans-serif;
+--font-josefinSansBold:"JosefinSansBold", sans-serif; */
+
+  --Light-Grayish-Blue2: hsl(
+    234,
+    39%,
+    85%
+  ); /* Example color - adjust as needed */
+
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+  --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+
+@layer components {
+  .font-josefinSans {
+    font-family: JosefinSans, sans-serif;
+  }
+  .font-josefinSansBold {
+    font-family: JosefinSansBold, sans-serif;
+  }
+}
+
+@theme {
+  --breakpoint-2xl: 90rem;
+}
+
+.border-gradient:hover {
+  border-color: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+}
+
+.gradient-border-hover {
+  border: 0.1px solid transparent hsl(234, 39%, 85%);
+  background-clip: padding-box; /* Prevents gradient bleed */
+}
+
+.gradient-border-hover:hover {
+  background: linear-gradient(
+      to right,
+      var(--container-bg),
+      var(--container-bg)
+    ),
+    /* Match your bg color */
+      linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 0.1px solid transparent;
+}
