@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "text": "buy groceries",
+      "completed": false,
+      "date": 1780814334338,
+      "id": "CKyCDebUOJg"
+    },
+    {
+      "text": "excercise",
+      "completed": true,
+      "date": 1780814346371,
+      "id": "yLJf2BdqZp0"
+    },
+    {
+      "text": "read a book",
+      "completed": true,
+      "date": 1780818789538,
+      "id": "sHcFKB8QPnM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
